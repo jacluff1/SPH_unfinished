@@ -1,7 +1,7 @@
 import numpy as np
 
-from params import params
-for key,val in params.items():
+from params import par
+for key,val in par.items():
     exec(key + '=val')
 
 def placement_uniform_sphere():
@@ -37,6 +37,19 @@ def placement_uniform_sphere():
 
 def velocity_random_motion():
 
-    V1d =   vel0_av * np.random.randn(N)
+    V   =   np.zeros( (N,3) )
 
-    return V1d
+    V[:,0]  =   np.random.normal(0,disp0,N)
+    V[:,1]  =   np.random.normal(0,disp0,N)
+    V[:,2]  =   np.random.normal(0,disp0,N)
+
+    return V
+
+def velocity_rotation_uniform(R):
+
+    V   =   np.zeros( (N,3) )
+
+    for i in range(N):
+        V[i,:]  =   np.cross(omega0,R[i,:])
+
+    return V
