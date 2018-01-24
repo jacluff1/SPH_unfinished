@@ -25,8 +25,9 @@ def run_particle_motion():
 
     # position and velocity arrays
     Position        =   ic.placement_uniform_sphere()
+    Velocity        =   ic.velocity_zero()
     # Velocity        =   ic.velocity_random_motion() + ic.velocity_rotation_uniform(Position)
-    Velocity        =   ic.velocity_rotation_uniform(Position)
+    # Velocity        =   ic.velocity_rotation_uniform(Position)
 
     # use for now, but requires further development
     dt              =   .001

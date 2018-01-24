@@ -20,6 +20,15 @@ par['disp0']    =   1e-3                                    # initial velocity d
 par['omega0']   =   np.array([ 0,0,(2*np.pi)/par['tau0'] ]) # initial rotational axis
 
 #===============================================================================
+""" smoothing parameters """
+#===============================================================================
+
+# par['N_want']   =   50
+# par['N_pm']     =   int(.1 * par['N_want'])
+# par['N_min']    =   par['N_want'] - par['N_pm']
+# par['N_max']    =   par['N_want'] + par['N_pm']
+
+#===============================================================================
 """ physical parameters """
 #===============================================================================
 
@@ -37,4 +46,4 @@ par['beta']     =   1       # tunable shock parameter
 
 par['k']    =   1.3807e-16  # [cm^2 g s^-2 K-1] Boltzmann's constant
 par['mu']   =   2           # mean molecular weight (H2 in this case)
-par['G']    =   10          # [natural unity] gravitational constant
+par['G']    =   1           # [natural unity] gravitational constant

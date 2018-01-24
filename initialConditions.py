@@ -35,6 +35,12 @@ def placement_uniform_sphere():
 
     return X
 
+def velocity_zero():
+
+    V   =   np.zeros( (N,3) )
+    
+    return V
+
 def velocity_random_motion():
 
     V   =   np.zeros( (N,3) )
